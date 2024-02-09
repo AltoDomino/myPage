@@ -2,6 +2,8 @@ export const Exp = (changePage : (newPage: "Exp") => void) => {
     const shopView = document.createElement("div")
     const workWith = document.createElement("div")
     const technologic = document.createElement("img")
+    const ja = document.createElement("img")
+    ja.src="/grafiki/6939.jpg"
     technologic.alt = "techno"
     technologic.style.height= "550px"
     technologic.style.width= "850px"
@@ -11,6 +13,7 @@ export const Exp = (changePage : (newPage: "Exp") => void) => {
     workWith.style.fontSize="50px"
     shopView.style.paddingLeft="300px"
     shopView.style.paddingTop="20px"
+    
     shopView.appendChild(workWith)
     shopView.appendChild(technologic)
 

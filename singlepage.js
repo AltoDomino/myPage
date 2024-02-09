@@ -5,6 +5,8 @@ const GetFiles = async() => {
    const indexjs = await fsPromises.readFile('./dist/index.cyk.js')
    const htmljs = await fsPromises.readFile('./cyk.html')
    const portfolioCss = await fsPromises.readFile('./portfolio.css')
+   const ja = await fsPromises.readFile('./grafiki/6939.png')
+   const ja2 = await fsPromises.readFile('./grafiki/ja22.png')
     const image1 = await fsPromises.readFile('./grafiki/instag.png')
     const technolog = await fsPromises.readFile('./grafiki/csss.png')
     const image2 = await fsPromises.readFile('./grafiki/person.png')
@@ -16,11 +18,11 @@ const GetFiles = async() => {
     const image8 = await fsPromises.readFile('./grafiki/taniec.jpg')
     const image9 = await fsPromises.readFile('./grafiki/nozki.jpg')
     const image10 = await fsPromises.readFile('./grafiki/git.png')
-    return [technolog,indexjs,htmljs,image1,portfolioCss,image2,image3,image4,image5,image6,image7,image8,image9,image10]
+    return [technolog,ja,ja2,indexjs,htmljs,image1,portfolioCss,image2,image3,image4,image5,image6,image7,image8,image9,image10]
     }
 
 http.createServer(async(req,res) =>{
-    const  [technolog,indexjs,htmljs,image1,portfolioCss,image2,image3,image4,image5,image6,image7,image8,image9,image10] = await GetFiles()
+    const  [technolog,ja,ja2,indexjs,htmljs,image1,portfolioCss,image2,image3,image4,image5,image6,image7,image8,image9,image10] = await GetFiles()
     switch(req.url){
         case '/':
         res.writeHead(200, {'Content-Type' : 'text/html'})
@@ -30,6 +32,16 @@ http.createServer(async(req,res) =>{
         case '/grafiki/csss.png':
         res.writeHead(200, {'Content-Type' : 'text/png'})
         res.write(technolog)
+        res.end()
+        break
+        case '/grafiki/6939.png':
+        res.writeHead(200, {'Content-Type' : 'text/png'}) 
+        res.write(ja)
+        res.end()
+        break
+        case '/grafiki/ja22.png':
+        res.writeHead(200, {'Content-Type' : 'text/png'})
+        res.write(ja2)
         res.end()
         break
         case '/grafiki/instag.png':
