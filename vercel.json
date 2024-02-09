@@ -1,17 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "/singlepage.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
-    
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
+    { "src": "/src/(.*)", "dest": "/$1" },
+    { "src": "/public/(.*)", "dest": "/public/$1" },
+    { "src": "/[^.]+", "dest": "/index.cyk.js", "status": 200 }
   ]
 }
-
