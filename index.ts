@@ -3,7 +3,7 @@ import { shop } from "./src/shop";
 import { Exp } from "./src/experience";
 
 let currentView: HTMLElement | null = null;
-
+'CHUJA, BO TO DOMINIK JEST CWELEM'
 const root = document.getElementById("root");
 
 const renderMainView = () => {
