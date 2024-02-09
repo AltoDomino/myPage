@@ -2,12 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": { "maxLambdaSize": "20mb" }
+      "src": "./singlepage.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/singlepage.js" }
+    
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }
+

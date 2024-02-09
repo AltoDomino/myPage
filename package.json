@@ -5,11 +5,15 @@
   "main": "singlepage.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon singlepage"
+    "start": "node singlepage.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  },
+
   "devDependencies": {
     "nodemon": "^3.0.1",
     "ts-loader": "^9.5.1",
