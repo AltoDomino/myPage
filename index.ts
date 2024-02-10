@@ -3,7 +3,6 @@ import { shop } from "./src/shop";
 import { Exp } from "./src/experience";
 
 let currentView: HTMLElement | null = null;
-"adrian jest deklem hehe"
 const root = document.getElementById("root");
 
 const renderMainView = () => {
