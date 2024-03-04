@@ -11,7 +11,6 @@ export const shop = (changePage : (newPage: "main") => void) => {
     ja2.src="/grafiki/ja22.png"
     ja2.alt="ja2"
 
-
     ja.src="/grafiki/6939.png" 
     ja.alt="ja"
     
