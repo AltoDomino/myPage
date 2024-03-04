@@ -84,16 +84,16 @@ http.createServer(async(req,res) =>{
         res.write(image10)
         res.end()
         break
-        // case '/grafiki/6939.png':
-        // res.writeHead(200, {'Content-Type' : 'text/png'})
-        // res.write(image11)
-        // res.end()
-        // break
-        // case '/grafiki/ja22.png':
-        // res.writeHead(200, {'Content-Type' : 'text/png'})
-        // res.write(image12)
-        // res.end()
-        // break
+        case '/grafiki/6939.png':
+        res.writeHead(200, {'Content-Type' : 'text/png'})
+        res.write(image11)
+        res.end()
+        break
+        case '/grafiki/ja22.png':
+        res.writeHead(200, {'Content-Type' : 'text/png'})
+        res.write(image12)
+        res.end()
+        break
         case '/dajjs':
         res.writeHead(200, {'Content-Type' : 'text/javascript'})
         res.write(indexjs)
